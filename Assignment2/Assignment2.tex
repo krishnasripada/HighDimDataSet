@@ -1,0 +1,212 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\graphicspath{{.}}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{floatrow}
+\usepackage{bigints}
+\lstset{
+language=[LaTeX]TeX,
+backgroundcolor=\color{gray!25},
+basicstyle=\ttfamily,
+columns=flexible,
+breaklines=true
+}
+\captionsetup{labelsep=space,justification=centering,singlelinecheck=off}
+\reversemarginpar
+\usepackage[paper=a4paper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=10mm,      % Length of section titles
+            marginparsep=0.8mm,       % Space between titles and text
+            margin=11mm,              % 25mm margins
+            includemp]{geometry}
+
+\begin{document}
+\section*{}
+\begin{flushleft}
+Name: Krishna Chaitanya Sripada\\
+\end{flushleft}
+\section*{Ans 1}
+\begin{flushleft}
+To prove $O(n)$ is a group when equipped with the matrix multiplication, we need to prove that the 4 points mentioned in Definition 1 hold good.\\
+\vspace{0.5em}
+\textbf{Point 1:} We need to prove that on multiplying two orthogonal matrices in $O(n)$, we get back an orthogonal matrix thus meaning the resultant matrix is also in $O(n)$.\\
+Let us consider two orthogonal matrices G and H, then,\\
+\vspace{0.5em}
+$(G G^{T}) (H H^{T}) = (G H) (G^{T} H ^{T}) = (H G) (H G)^{T} = I$. This means that the resultant matrix is in the group $O(n)$.\\
+\vspace{0.5em}
+\textbf{Proof by example:} $A_{n \times n}$ is an orthogonal matrix if, $A A^{T} = A^{T} A = I$. Consider the multiplication of following orthogonal matrices,\\
+$$
+\begin{bmatrix} 
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & -1 
+\end{bmatrix}
+\begin{bmatrix} 
+0 & -1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & -1 
+\end{bmatrix}
+= \begin{bmatrix} 
+0 & 1 & 0 \\
+-1 & 0 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+ = A
+$$
+\\
+The transpose of this matrix is ,\\
+$$
+A^{T} =
+\begin{bmatrix} 
+0 & -1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+$$
+\\
+Therefore, 
+$$
+A A^{T} =
+\begin{bmatrix} 
+0 & 1 & 0 \\
+-1 & 0 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+\begin{bmatrix} 
+0 & -1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+= 
+\begin{bmatrix} 
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+ = I
+$$
+\\
+Also,
+$$
+A^{T} A=
+\begin{bmatrix} 
+0 & -1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+\begin{bmatrix} 
+0 & 1 & 0 \\
+-1 & 0 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+= 
+\begin{bmatrix} 
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}
+ = I
+$$
+\\
+The resultant matrix also belongs to group $O(n)$.\\
+\vspace{0.5em}
+\textbf{Point 2:}  We need to prove that matrix multiplication of 3 matrices that belong to $O(n)$ is associative.\\
+Let us consider three orthogonal matrices F, G and H, then,\\
+\vspace{0.5em}
+$\sum_{p} \sum_{q} F_{ip} G_{pq} H_{qj} = \sum_{p} F_{ip} (\sum_{q} G_{pq} H_{qj}) = \sum_{p} F_{ip} (GH)_{pj} = F(GH)$\\
+\vspace{0.5em}
+$\sum_{p} \sum_{q} F_{ip} G_{pq} H_{qj} = \sum_{q} (\sum_{p} F_{ip} G_{pq}) H_{qj} = \sum_{q} (FG)_{iq} H_{qj} = (FG)H$\\
+\vspace{0.5em}
+\textbf{Point 3:} 
+Let the element that belongs to the group $O(n)$ be an identity matrix (as Identity matrix is also orthogonal), then for another orthogonal matrix G $\in O(n)$, we get,\\
+\vspace{0.5em}
+$G (I) = I (G) = G$. This is because matrix multiplication of an identity matrix and any other matrix is commutative in nature and returns the original matrix. \\
+\vspace{0.5em}
+\textbf{Point 4:}
+We need to prove that the multiplication of an inverse and the matrix itself is an identity matrix which also belongs to the group $O(n)$.\\
+Since, inverse of an orthogonal matrix is also orthogonal, it follows the Point 1 stated above where we check for the multiplication of two orthogonal matrices. \\
+In this case, we get,\\
+$G (G^{-1}) = I$ and $G^{-1} (G) = I$. Thus we can prove that the identity matrix also belongs to $O(n)$, we can say an inverse exists in $O(n)$.
+\end{flushleft}
+\section*{Ans 2}
+\begin{flushleft}
+Since $U \in O(n)$, this means that U is in the group of orthogonal matrices, so for any matrix M that belongs to this group, we know that, \\
+\vspace{0.5em}
+$M^{T} = M^{-1}$ (The transpose of M is the inverse of M). \\
+\vspace{0.5em}
+Also, $M M^{-1} = I$\\
+\vspace{0.5em}
+Therefore, \\
+\vspace{0.5em}
+$M M^{T} = I$ \\
+\vspace{0.5em}
+Now taking a determinant on both sides,
+\vspace{0.5em}
+$det ( M M^{T}) = det I$\\
+\vspace{0.5em}
+We know that $det M * det M^{T} = 1$ (since $det I = 1$).\\
+\vspace{0.5em}
+Now $det M * det M = 1$ (since $det M^{T} = det M$)\\
+\vspace{0.5em}
+Meaning $(det M)^{2} = 1$\\
+\vspace{0.5em}
+Therefore, det(M) = $\pm$ 1.
+\end{flushleft}
+\section*{Ans 3}
+\begin{flushleft}
+To prove $SO(n)$ is a subgroup of $O(n)$, we need to prove that the 2 points mentioned in Definition 2 hold good.\\
+\vspace{0.5em}
+\textbf{Point 1:} To prove this, let us consider two orthogonal matrices G, H $\in$ $SO(n)$, this means that the product of two orthogonal matrices should belong to the $SO(n)$.\\
+\vspace{0.5em}
+\textbf{Proof by example:} Consider the multiplication of the following orthogonal matrices that below to $SO(n)$. \\
+$$
+\begin{bmatrix} 
+1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & -1 
+\end{bmatrix} 
+\begin{bmatrix} 
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -1 
+\end{bmatrix} 
+= 
+\begin{bmatrix} 
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix} 
+$$
+\\
+The determinant of the resultant matrix  = 1 which belongs to $SO(n)$ which is an special orthogonal matrix. Thus the resultant matrix also belongs to $SO(n)$.\\
+\vspace{0.5em}
+\textbf{Point 2: } We need to prove that the inverse of a matrix and the multiplication of the same matrix is an identity matrix. \\
+\vspace{0.5em}
+Since, inverse of an orthogonal matrix is also orthogonal, it follows the Point 1 stated above where we check for the multiplication of two orthogonal matrices. \\
+In this case, we get,\\
+$G (G^{-1}) = I$ and $G^{-1} (G) = I$. Thus we can prove that the identity matrix also belongs to $SO(n)$, we can say an inverse exists in $SO(n)$.
+\end{flushleft}
+\section*{Ans 4}
+\begin{flushleft}
+Given that $$
+e_{1} = 
+\begin{bmatrix} 
+1 \\
+0 \\
+\vdots \\
+0 
+\end{bmatrix} 
+$$
+and $\mathcal{G} = \{U \in SO(n), U e_{1} = e_{1}\}$\\
+
+\end{flushleft}
+\end{document}
