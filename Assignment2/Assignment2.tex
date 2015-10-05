@@ -207,6 +207,183 @@ e_{1} =
 \end{bmatrix} 
 $$
 and $\mathcal{G} = \{U \in SO(n), U e_{1} = e_{1}\}$\\
-
+\vspace{0.5em}
+Let two elements $U_{1}, U_{2} \in \mathcal{G}$, then $U_{1} e_{1} = e_{1}$ and $U_{2} e_{1} = e_{1}$.\\
+\vspace{0.5em}
+(a) Property 1 Proof: Since every element in $\mathcal{G} \in SO(n)$, we have, \\
+\vspace{0.5em}
+$U_{1} U_{2} (U_{1} U_{2})^{T} = U_{1} U_{2} U_{2}^{T} U_{1}^{T} = I*I = I$ and \\
+\vspace{0.5em}
+$(U_{1} U_{2}) e_{1} = U_{1} U_{2} e_{1} = U_{1} e_{1} = e_{1}$. \\
+\vspace{0.5em}
+Therefore $\mathcal{G}$ is closed under the operator *.\\
+\vspace{0.5em}
+(b) Property 2 Proof: Since $U \in SO(n)$, we have ,\\
+\vspace{0.5em}
+$U^{-1} = U^{T}$ and $U*U^{T}=I$. Therefore, $U*U^{-1} = U^{-1}*U = I$. Therefore $U^{-1} \in SO(n)$.\\
+\vspace{0.5em}
+Hence $\mathcal{G}$ is a subgroup of SO(n).
+\end{flushleft}
+\section*{Ans 5}
+\begin{flushleft}
+Given that W is $n-1 \times n-1$ matrix that belongs to $SO(n-1)$. That means, det(W) =1 and $WW^{T}=I$. \\
+\vspace{0.5em}
+Then $$
+U U^{T}=  
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W
+\end{bmatrix} 
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W^{T}
+\end{bmatrix}
+= \begin{bmatrix}
+    1 & 0 \\
+    0 & WW^{T}
+\end{bmatrix}
+$$
+$WW^{T} = I$ only if W $\in SO(n-1)$ and since it is given, $UU^{T}= I$. Property 1 holds true.\\
+\vspace{0.5em}
+And, \\
+\vspace{0.5em}
+$$
+U e_{1} = 
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W
+\end{bmatrix} 
+\begin{bmatrix} 
+1 \\
+0 \\
+\vdots \\
+0 
+\end{bmatrix} 
+$$
+Since W is $n-1 \times n-1$ matrix, the result is $e_{1}$. Thus, property 2 holds true.\\
+\vspace{0.5em}
+We can say every element U in $\mathcal{G}$ is of the form
+$$
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W
+\end{bmatrix} 
+$$
+\end{flushleft}
+\section*{Ans 6}
+\begin{flushleft}
+(a) Since $\mathcal{G} \longrightarrow SO(n-1)$ and $U \longmapsto \Psi(U) = W$ and if $U_{1}U_{2} \in \mathcal{G}$, we have,\\
+\vspace{0.5em}
+$$
+\Psi(U_{1} U_{2})= 
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W_{1}
+\end{bmatrix}
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W_{2}
+\end{bmatrix}
+= 
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W_{1}W_{2}
+\end{bmatrix}
+$$
+$$
+\Psi(U_{1}) = 
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W_{1}
+\end{bmatrix}
+$$
+$$
+\Psi(U_{2}) = 
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W_{2}
+\end{bmatrix}
+$$
+$$
+\Psi(U_{1}) \Psi(U_{2}) =
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W_{1}
+\end{bmatrix}
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W_{2}
+\end{bmatrix}
+= 
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W_{1}W_{2}
+\end{bmatrix}
+$$
+(b) To prove $\Psi$ is bijective, it needs to be injective and surjective.\\
+\vspace{0.5em}
+(i) Since $\Psi(U) = \Psi(V)$ and U, V $\in \mathcal{G}$, we must prove that U = V. Since for any output  of the $\Psi$ function gives the same result which is `W'. That means that the inputs are also equal for those outputs i.e., U = V.\\
+\vspace{0.5em}
+(ii) Since $\Psi(U) = W$ and $\Psi(U) = Q$, we get, W = Q and since Q $\in$ SO(n-1), W $\in$ SO(n-1), we get that,\\ 
+$$
+U =
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W
+\end{bmatrix}
+$$
+which states U $\in \mathcal{G}$. Hence proved it is surjective as well. Thus function $\Psi$ is bijective.
+\end{flushleft}
+\section*{Ans 7}
+\begin{flushleft}
+For any $x \in S^{n-1}$, there exists a $U \in SO(n)$. For the condition $U e_{1} = x$ to be satisfied, U can be constructed in such a way that the first column of U is similar to x and all other columns in U are both orthogonal to each other and the first column. Only then , the condition can be satisfied. Thus this makes U not to be unique as you can have multiple columns in U where they are orthogonal to each other and the first column since $U \in SO(n)$.
+\end{flushleft}
+\section*{Ans 8}
+\begin{flushleft}
+Given U and V are two n $\times$ n matrices in SO(n) such that $Ue_{1} = Ve_{1} = x$. For the condition
+$$
+U = V
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W
+\end{bmatrix}
+$$
+to be satisfied, to get a n $\times$ n matrix after multiplying an n$\times$n matrix with another n$\times$n matrix that contains W, it is necessary that W must $\in$ SO(n-1) so that resulting U can be orthogonal and also matrix multiplication V and 
+$$
+\begin{bmatrix}
+    1 & 0 \\
+    0 & W
+\end{bmatrix}
+$$
+will be possible.
+\end{flushleft}
+\section*{Ans 9}
+\begin{flushleft}
+\end{flushleft}
+\section*{Ans 10}
+\begin{flushleft}
+Since $\Omega \in SO(n)$ and $U \in \frac{SO(n)}{\mathcal{G}}$, we have $\varphi(\Omega U) = \Omega U e_{1}$ and since $\varphi(U) = U e_{1}$, we finally get $\varphi(\Omega U) = \Omega \varphi(U)$. Also we can state that multiplication of $\Omega U$ which result in a mapping that respects the action of $SO(n)$ since $\Omega$ and $U$ already $\in SO(n)$. Hence proved.
+\end{flushleft}
+\section*{Ans 11}
+\begin{flushleft}
+(a) To prove that $\varphi$ is bijective, we need to prove that:\\
+\vspace{0.5em}
+\begin{enumerate}
+\item for any U,V $\in \mathcal{G}$, $\varphi(U) = \varphi(V) \Longrightarrow U = V$. 
+\item for any $x \in S^{n-1}$, there exists $U \in \frac{SO(n)}{\mathcal{G}}$, such that $\varphi(U) = x$.
+\end{enumerate}
+To prove that the map $\varphi$ is injective, we know that $\varphi(U) = U e_{1}$ and $\varphi(V) = V e_{1}$. Since $\varphi(U) = \varphi(V)$, we have $U e_{1} = V e_{1}$. Since U $\in \mathcal{G}$ and V $\in \mathcal{G}$, from this we get $U=V$. Hence map $\varphi$ is injective.\\
+\vspace{0.5em}
+To prove that the map $\varphi$ is surjective, since $\varphi(U) = U e_{1}$. We get that $U e_{1} = x$. This proves that $U \in SO(n)$. Since $\mathcal{G}$ is a subgroup of SO(n), we can state that $U$ also $\in \frac{SO(n)}{\mathcal{G}}$. Hence proved.\\
+\vspace{0.5em}
+Thus $\varphi$ is bijective.\\
+\vspace{0.5em}
+(b) The map $\varphi$ is continuous at a point `a' $\in S^{n-1}$ if,\\
+\vspace{0.5em}
+$\forall \epsilon \textgreater 0$, $\exists \delta \textgreater 0$, such that $\textbar x - a \textbar \textless \delta \Longrightarrow \textbar \varphi(x) - \varphi(a) \textbar \textless \epsilon$.\\
+\vspace{0.5em}
+Since $\varphi(U) = U e_{1}$, we need to prove that:\\
+\vspace{0.5em}
+$\forall \epsilon \textgreater 0$, $\exists \delta \textgreater 0$, such that $\textbar x - a \textbar \textless \delta \Longrightarrow \textbar x e_{1} - a e_{1} \textbar \textless \epsilon$.
 \end{flushleft}
 \end{document}
