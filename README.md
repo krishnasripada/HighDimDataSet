@@ -56,4 +56,11 @@
 
 ## Dependencies
 
-    
+- APIs
+  - Recoder, version 0.97
+- Built-time
+  - Scala, version 2.11.7
+  - ANTLR, version 4.5.1
+- Runtime
+  - Java, version 7,8
+  - Android, version 5.0 and above  
