@@ -6,6 +6,8 @@
   - **Input:** Each JSON file contains information corresponding to a particular bug. So fixing more than 1 bug type would require more than 1 JSON file to be provide which contains the following information.
     - The bug type, repository it belongs to, file that contains the bug, class of the bug, method that contains the bug and the line number in the source code that contains the bug.
 
+      Below is the snapshot of the JSON files. Filenames are of the format "bugName".json
+
       File: setTag.json
 
       ```json
