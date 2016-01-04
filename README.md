@@ -66,3 +66,13 @@
 - Runtime
   - Java, version 7,8
   - Android, version 5.0 and above  
+
+## Testing
+
+- Example of an Input file:
+
+  ```java
+  ...
+  view.setTag(R.id.start_time, view.findViewById(R.id.start_time));
+  ...
+  ```
