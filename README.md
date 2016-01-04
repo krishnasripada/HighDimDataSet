@@ -11,22 +11,22 @@
       ```json
 
       {
-		"bugs": [
-		{
-			"bug": "view.setTag",
-			"repo": "ianhanniballake/ContractionTimer",
-			"file": "com.ianhanniballake.contractiontimer.ui.ViewFragment",
-			"method": "onCreateView",
-			"line": 214
-		},
-		{
-			"bug": "view.getTag",
-			"repo": "ianhanniballake/ContractionTimer",
-			"file": "com.ianhanniballake.contractiontimer.ui.ViewFragment",
-			"method": "bindView",
-			"line": 120 
-		}
-		]
+			"bugs": [
+			{
+				"bug": "view.setTag",
+				"repo": "ianhanniballake/ContractionTimer",
+				"file": "com.ianhanniballake.contractiontimer.ui.ViewFragment",
+				"method": "onCreateView",
+				"line": 214
+			},
+			{
+				"bug": "view.getTag",
+				"repo": "ianhanniballake/ContractionTimer",
+				"file": "com.ianhanniballake.contractiontimer.ui.ViewFragment",
+				"method": "bindView",
+				"line": 120 
+			}
+			]
       }
       ```
   
