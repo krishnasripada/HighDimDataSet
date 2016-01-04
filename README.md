@@ -69,10 +69,20 @@
 
 ## Testing
 
-- Example of an Input file:
+- Example of an Input file: Code Snippet of the view setTag bug from the Contraction Timer Application
 
   ```java
   ...
   view.setTag(R.id.start_time, view.findViewById(R.id.start_time));
+  ...
+  ```
+- Example of an Output file: Code Snippet of the view setTag bug fix from the Contraction Timer Application
+
+  ```java
+  ...
+  SparseArray sparseArray = new SparseArray();
+  sparseArray.append(R.id.start_time, view.findViewById(R.id.start_time));
+  SynthesizeTagWrapper synthesizeTagWrapper = new SynthesizeTagWrapper(sparseArray);
+  view.setTag(R.id.start_time, synthesizeTagWrapper);
   ...
   ```
