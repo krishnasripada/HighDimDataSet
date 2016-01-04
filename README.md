@@ -35,15 +35,15 @@
       ```json
 
       {
-   		"bugs": [
-      		{
-   			"bug": "media.MediaScannerConnection",
+                "bugs": [
+                {
+			"bug": "media.MediaScannerConnection",
   			"repo": "MediaScannerConnectionApp",
   			"file": "edu.colorado.cuplv.mediascannerconnectionapp.MediaScanner",
   			"class": "android.media.MediaScannerConnection",
   			"method": "onCreate",
   			"line": 29
-      		}
-       		]
+                }
+                ]
       }
-      ``` 
+      ```
