@@ -48,7 +48,10 @@
 	}
       ```
 
-    - A query language that represents the repair specification for the bug. This is an ANTLR4 grammar representation of the repair specification which contains the method name and the arguments of the fixed API call, Android Code snippet specified as an Abstract Syntax Tree using ANTLR, parameters of the buggy API call and the repair specification rule which states what substitutions constitute the repair spec.
+    - A query language that represents the repair specification for the bug. 
+      
+      - This is an ANTLR4 grammar representation of the repair specification which contains the method name and the arguments of the fixed API call, Android Code snippet specified as an Abstract Syntax Tree using ANTLR, parameters of the buggy API call and the repair specification rule which states what substitutions constitute the repair spec.
+  
   - **Output:** File(s) containing the fix that complies to the repair specification are generated.
 
 ## Dependencies
