@@ -20,11 +20,11 @@
 			"line": 214
 		},
 		{
-			"bug": "view.setTag",
+			"bug": "view.getTag",
 			"repo": "ianhanniballake/ContractionTimer",
 			"file": "com.ianhanniballake.contractiontimer.ui.ViewFragment",
-			"method": "onCreateView",
-			"line": 214
+			"method": "bindView",
+			"line": 120 
 		}
 		]
       }
