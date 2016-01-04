@@ -6,7 +6,7 @@
   - Input: Each JSON file contains information corresponding to a particular bug. So fixing more than 1 bug type would require more than 1 JSON file to be provide which contains the following information.
     - The bug type, repository it belongs to, file that contains the bug, class of the bug, method that contains the bug and the line number in the source code that contains the bug.
 
-      Format: setTag.json
+      File: setTag.json
 
       ```json
 
@@ -30,7 +30,7 @@
       }
       ```
   
-      Format: scanFile.json
+      File: scanFile.json
 
       ```json
 
@@ -47,3 +47,10 @@
 			]
 	}
       ```
+
+    - A query language that represents the repair specification for the bug. This is an ANTLR4 grammar representation of the repair specification which contains the method name and the arguments of the fixed API call, Android Code snippet specified as an Abstract Syntax Tree using ANTLR, parameters of the buggy API call and the repair specification rule which states what substitutions constitute the repair spec.
+  - Output: File(s) containing the fix that complies to the repair specification are generated.
+
+## Dependencies
+
+    
