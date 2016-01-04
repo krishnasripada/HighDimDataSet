@@ -3,7 +3,7 @@
 
 - Fix buggy apps based on repair specification (command line tool)
   - **Description:** Given a detailed repair specification, we patch the buggy app. 
-  - **Input:** Each JSON file contains information corresponding to a particular bug. So fixing more than 1 bug type would require more than 1 JSON file to be provide which contains the following information.
+  - **Input:** Each JSON file contains information corresponding to a particular bug type.
     - The bug type, repository it belongs to, file that contains the bug, class of the bug, method that contains the bug and the line number in the source code that contains the bug.
 
       Below is the snapshot of the JSON files. Filenames are of the format "bugName".json
